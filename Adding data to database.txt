@@ -1,0 +1,5 @@
+docker exec -it mysql mysql -u root -p
+use flask-db
+INSERT INTO `users` VALUES (4, 'Thomas', 'Marsh', 'test@qa5.com');
+select * from users;
+exit
