@@ -6,10 +6,10 @@ pipeline {
         sh "bash install-docker.sh"
                      }
                  }
-     stage ('Run docker-compose.yaml) {
+     stage ('Run docker-compose.yaml') {
         steps {
           sh "docker compose up -d"
         }
-            }
-            }
-            }
+     }
+  }
+}
