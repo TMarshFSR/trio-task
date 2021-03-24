@@ -8,7 +8,7 @@ pipeline {
                  }
      stage ('Run docker-compose.yaml') {
         steps {
-          sh "docker compose up -d"
+          sh "docker-compose up -d"
         }
      }
   }
