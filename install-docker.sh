@@ -1,4 +1,4 @@
-1#!/bin/bash
+#!/bin/bash
 
 sudo apt update
 sudo apt install -y curl jq
