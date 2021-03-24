@@ -1,0 +1,32 @@
+version: "3.8"
+services:
+  nginx:
+    image: nginx:alpine
+    ports:
+    - target: 80
+      published: 80
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: ./nginx/nginx.conf
+      target: /etc/nginx/nginx.conf 
+
+  trio-task-flask-app:
+    container_name: flask-app
+    image: trio-flask-app
+    build: ./flask-app
+
+
+  trio-db:
+    container_name: mysql
+    image: trio-db
+    build: ./db
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: flask-db
+    volumes:
+    - type: volume
+      source: trio-db-volume
+      target: /var/lib/mysql
+volumes:
+  trio-db-volume:
