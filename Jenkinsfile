@@ -7,7 +7,7 @@ pipeline {
   stages{
     stage ("Install Dependencies") {
       steps{
-        sh ""
+        sh "bash install-docker.sh"
                      }
                  }
     stage ("Build") {
