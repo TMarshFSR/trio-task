@@ -22,7 +22,7 @@ services:
     image: trio-db
     build: ./db
     environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MY_SQL_ROOT_PASSWORD}
       MYSQL_DATABASE: flask-db
     volumes:
     - type: volume
