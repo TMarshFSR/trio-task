@@ -2,6 +2,7 @@ pipeline {
   agent any
   environment{
     MY_SQL_ROOT_PASSWORD = credentials("MY_SQL_ROOT_PASSWORD")
+    DOCKER_PASSWORD = credentials("DOCKER_PASSWORD")
   }
   stages{
     stage ("Install Dependencies") {
