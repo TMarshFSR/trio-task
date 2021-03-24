@@ -19,7 +19,7 @@ services:
 
   trio-db:
     container_name: mysql
-    image: trio-db
+    image: tmarshqa/trio-db
     build: ./db
     environment:
       MYSQL_ROOT_PASSWORD: ${MY_SQL_ROOT_PASSWORD}
