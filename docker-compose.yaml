@@ -12,7 +12,7 @@ services:
       target: /etc/nginx/nginx.conf 
 
   trio-task-flask-app:
-    container_name: flask-app
+    container_name: tmarshqa/flask-app
     image: trio-flask-app
     build: ./flask-app
 
