@@ -1,15 +1,22 @@
 pipeline {
   agent any
+  environment{
+    MY_SQL_ROOT_PASSWORD = credentials("MY_SQL_ROOT_PASSWORD")
+  }
   stages{
-    stage ('Install Docker') {
+    stage ("Build") {
       steps{
-        sh "bash install-docker.sh"
+        sh "docker-compose build --parallel"
                      }
                  }
-     stage ('Run docker-compose.yaml') {
+     stage ("Push") {
+        steps {
+          sh "docker-compose push"
+        }
+     }
+     stage ("Deploy") {
         steps {
           sh "docker-compose up -d"
         }
      }
   }
-}
