@@ -13,7 +13,7 @@ services:
 
   trio-task-flask-app:
     container_name: flask-app
-    image: trio-flask-app
+    image: tmarshqa/trio-flask-app
     build: ./flask-app
 
 
