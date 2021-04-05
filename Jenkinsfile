@@ -3,6 +3,7 @@ pipeline {
   environment{
     MY_SQL_ROOT_PASSWORD = credentials("MY_SQL_ROOT_PASSWORD")
     DOCKER_PASSWORD = credentials("DOCKER_PASSWORD")
+    JENKINS_KEYPAIR = credentials("JENKINS_KEYPAIR")
   }
   stages{
     stage ("Install Dependencies") {
