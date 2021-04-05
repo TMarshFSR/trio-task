@@ -23,7 +23,7 @@ pipeline {
      }
      stage ("Deploy") {
         steps {
-          sh "bash jenkins-deploy.sh"
+          sh "ssh -i ~/.ssh/id_rsa ubuntu@63.35.219.12 'cd trio-task' 'docker-compose up -d'
         }
      }
   }
