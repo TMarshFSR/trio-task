@@ -22,7 +22,7 @@ pipeline {
      }
      stage ("Deploy") {
         steps {
-          sh "docker-compose up -d"
+          sh "bash jenkins-deploy.sh"
         }
      }
   }
