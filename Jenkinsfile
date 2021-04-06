@@ -5,6 +5,7 @@ pipeline {
     DOCKER_PASSWORD = credentials("DOCKER_PASSWORD")
     JENKINS_KEYPAIR = credentials("JENKINS_KEYPAIR")
   }
+  
   stages{
     stage ("Install Dependencies") {
       steps{
